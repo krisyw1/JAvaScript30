@@ -61,7 +61,8 @@
  window.addEventListener('keydown', function(e){
   const audio =document.querySelector(`audio[data-key="${e.keyCode}"]`); // returns key & attempts bind
   if(!audio) return; // stops function running if no key/audio bind
-  console.log(audio);
+  
+  audio.play();
 
  });
 </script>
