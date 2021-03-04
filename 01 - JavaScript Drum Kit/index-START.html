@@ -59,23 +59,17 @@
 
 <script>
 
-
- 
  function playSound(e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); // returns key & attempts bind
   const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-  
   if(!audio) return; // stops function running if no key/audio bind
   key.classList.add('playing');//adds playing styles
   audio.currentTime = 0; //rewinds audio to start
   audio.play();
-  
-
   }
 
   function removeTransition(e){
     if (e.propertyName !== 'transform') return; //skip if not a transform
-    console.log(this);
     this.classList.remove('playing');
   }
 
